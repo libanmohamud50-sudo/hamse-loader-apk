@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
         s.setAllowContentAccess(true);
         webView.setWebViewClient(new WebViewClient());
         setContentView(webView);
-        webView.loadUrl("file:///android_asset/index.html");
+        webView.loadUrl("https://hamse-panel-production.up.railway.app/loader.html");
     }
 
     @Override
