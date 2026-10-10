@@ -15,8 +15,10 @@ jobs:
       - uses: android-actions/setup-android@v3
         with:
           packages: 'platforms;android-34 build-tools;34.0.0 platform-tools'
-      - run: chmod +x gradlew || true
-      - run: gradle assembleDebug
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+      - name: Build APK
+        run: gradle assembleDebug
       - uses: actions/upload-artifact@v4
         with:
           name: hamse-loader-apk
