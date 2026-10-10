@@ -72,9 +72,7 @@ const inp = $('#key');
 function show(cls, msg){ status.className = 'status ' + cls; status.textContent = msg; }
 
 inp.addEventListener('input', e => {
-  let v = e.target.value.toUpperCase().replace(/[^A-Z0-9-]/g,'');
-  if (!v.startsWith('HC-') && v.length > 0) v = 'HC-' + v.replace(/^HC-?/,'');
-  e.target.value = v.slice(0, 9);
+  e.target.value = e.target.value.toUpperCase().replace(/[^A-Z0-9-]/g,'');
 });
 
 btn.addEventListener('click', async () => {
